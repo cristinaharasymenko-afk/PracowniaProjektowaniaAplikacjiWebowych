@@ -1,0 +1,47 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="Magazyn Elektro-Bud" Height="450" Width="800">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label>Nazwa:</Label>
+        <TextBox Grid.Row="1" Grid.Column="0" Name="Nazwa" Margin="2"/>
+
+        <Label Grid.Row="0" Grid.Column="1">Kategoria:</Label>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="Kategoria" Margin="2"/>
+
+        <Label Grid.Row="0" Grid.Column="2">Kod EAN:</Label>
+        <TextBox Grid.Row="1" Grid.Column="2" Name="Kod" Margin="2"/>
+
+        <Label Grid.Row="2">Miejsce przechowywania:</Label>
+        <Label Grid.Row="3">Sektor:</Label>
+        <TextBox Grid.Row="4" Grid.Column="0" Name="Sektor" Margin="2"/>
+
+        <Label Grid.Row="3" Grid.Column="1">Regal:</Label>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="Regal" Margin="2"/>
+
+        <Label Grid.Row="3" Grid.Column="2">Polka:</Label>
+        <TextBox Grid.Row="4" Grid.Column="2" x:Name="Polka" Margin="2"/>
+
+        <Button Grid.Row="5"  Grid.Column="1" Name="Wyszukaj"  Click="Wyszukaj_Click" Background="Blue" Width="140"  >Wyszukaj</Button>
+        <TextBlock Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" x:Name="Odpowiedz" Margin="5" FontSize="16" TextWrapping="Wrap"/>
+
+    </Grid>
+</Window>
